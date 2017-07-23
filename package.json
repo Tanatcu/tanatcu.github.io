@@ -1,0 +1,27 @@
+{
+  "name": "Empeek",
+  "version": "1.0.0",
+  "description": "SPA that looks like records with comments",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "angular": "^1.6.5",
+    "angular-animate": "^1.6.5",
+    "angular-toastr": "^2.1.1",
+    "angular-ui-router": "^1.0.0-rc.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tanatcu/empeek_test.git"
+  },
+  "keywords": [],
+  "author": "Ruslan Loboda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tanatcu/empeek_test/issues"
+  },
+  "homepage": "https://github.com/Tanatcu/empeek_test#readme"
+}

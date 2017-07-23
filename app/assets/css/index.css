@@ -1,0 +1,245 @@
+@font-face {
+    font-family: 'Centrale Sans';
+    src: url('../../assets/fonts/Centrale Sans/Centrale Sans Light.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Centrale Sans', Arial, sans-serif;
+    outline: none;
+}
+
+.container {
+    height: 100vh;
+}
+
+.container:before, .container:after {
+    content: "";
+    clear: both;
+}
+
+aside {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 270px;
+    min-height: 100%;
+    background: #2b2f3e;
+    box-sizing: border-box;
+}
+
+.title {
+    padding: 15px 25px;
+    font-size: 2.3em;
+    font-weight: lighter;
+    color: #525564;
+}
+
+.grid {
+    padding: 0 15px 0 25px;
+}
+
+.title.items, .title.comments {
+    color: #6e7283;
+}
+
+aside .menu {
+    color: white;
+    width: 100%;
+    margin-top: 45px;
+}
+
+aside .menu_item {
+    background: linear-gradient(to bottom, #ff2e5b, #ff404b);
+    padding-left: 15px;
+    height: 58px;
+    line-height: 58px;
+}
+
+section {
+    margin-left: 270px;
+    float: left;
+    height: 100%;
+    width: calc(100% - 270px);
+    text-align: center;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+.todo_items {
+    width: 50%;
+    float: left;
+    text-align: justify;
+    padding-top: 10px;
+    margin-bottom: 25px;
+}
+
+.todo_items .add_item {
+    margin: 15px 0;
+    position: relative;
+}
+
+.todo_items .add_item .input.name {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #dedede;
+    font-weight: 600;
+    font-size: 0.9em;
+    width: calc(100% - 135px);
+    height: 38px;
+}
+
+.todo_items .add_item .input.name::placeholder {
+    color: #c8c8c8;
+}
+
+.todo_items .add_item .button.add {
+    position: absolute;
+    display: inline-block;
+    background: #27ccc0;
+    color: white;
+    height: 38px;
+    width: 126px;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-left: 10px;
+    right: 15px;
+}
+
+.todo_items .list_item {
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.todo_items .list_item .inner {
+    border-bottom: 1px solid #f2f2f2;
+    color: #2f3239;
+    font-size: 0.9em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 25px;
+    margin-right: 15px;
+}
+
+.todo_items .list_item .inner > * {
+    display: inline-block;
+}
+
+.todo_items .list_item .inner > .text_with_bundle {
+    width: calc(100% - 107px);
+}
+
+.todo_items .list_item .inner .name {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 85%;
+    vertical-align: middle;
+}
+
+.bundle {
+    display: inline-block;
+    border-radius: 15px;
+    height: 12px;
+    padding: 5px 5px;
+    background: #27ccc0;
+    color: white;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.todo_items .list_item .delete {
+    color: #ff2f5a;
+    box-sizing: border-box;
+    border: 1px solid #ff2f5a;
+    border-radius: 5px;
+    width: 100px;
+    height: 35px;
+    background: white;
+    cursor: pointer;
+}
+
+.active {
+    border-left: 4px solid #ff2f5a;
+    position: absolute;
+    left: -2px;
+    height: 100%;
+    top: 0;
+}
+
+.comment_list {
+    width: 45%;
+    float: right;
+    text-align: justify;
+    padding-top: 10px;
+    margin-bottom: 25px;
+}
+
+.comment_list .comment:after, .comment_list .comment:before {
+    content: '';
+    clear: both;
+}
+
+.comment_list .comment {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    color: #6d6d6d;
+    font-size: 0.8em;
+}
+
+.line {
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.avatar_wrap {
+    vertical-align: top;
+    min-width: 50px;
+    width: 15%;
+    display: inline-block;
+}
+
+.text {
+    width: 75%;
+    text-align: justify;
+    display: inline-block;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+}
+
+.textarea {
+    vertical-align: top;
+    display: inline-block;
+    width: 80%;
+}
+
+.avatar_wrap input[type=color] {
+    width: 50px;
+    height: 50px;
+    border: none;
+}
+
+.textarea textarea {
+    resize: none;
+    width: 100%;
+    height: 68px;
+    padding: 10px;
+    border: 1px solid #c8c8c8;
+}
+
+.shadow {
+    box-shadow: 1px 0 8px -2px;
+}
