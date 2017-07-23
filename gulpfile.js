@@ -11,9 +11,19 @@ var useref = require('gulp-useref'),
 		gulpif = require('gulp-if');
 
 
-gulp.task('default', ['watch'], function () {
+gulp.task('dev', function () {
 	connect.server({
-		root: './docs',
+		root: 'src',
+		port: 3000,
+		host: 'localhost',
+		fallback: 'src/index.html',
+		livereload: true
+	});
+});
+
+gulp.task('testProd', function () {
+	connect.server({
+		root: '.',
 		port: 3000,
 		host: 'localhost',
 		fallback: 'index.html',
@@ -21,34 +31,20 @@ gulp.task('default', ['watch'], function () {
 	});
 });
 
-gulp.task('watch', function () {
-	gulp.watch([
-		'app/*/*/*.html',
-		'app/*/*.html',
-		'app/*.js',
-		'app/*/*.js'
-	], ['reload']);
-});
-
-gulp.task('reload', function () {
-	gulp.src('./app/*.html')
-			.pipe(connect.reload());
-});
-
 gulp.task('build', ['html', 'fonts'], function() {
-	return gulp.src('index.html')
+	return gulp.src('src/index.html')
 			.pipe(useref())
 			.pipe(gulpif('*.js', uglify()))
 			.pipe(gulpif('*.css', cssmin()))
-			.pipe(gulp.dest('docs/'));
+			.pipe(gulp.dest('.'));
 });
 
 gulp.task('html', function() {
-	return gulp.src(['app/views/*.html', 'app/components/**/*.html'])
-			.pipe(gulp.dest('docs/views'));
+	return gulp.src(['src/app/views/*.html', 'src/app/components/**/*.html'])
+			.pipe(gulp.dest('./views'));
 });
 
 gulp.task('fonts', function() {
-	return gulp.src('app/assets/fonts/*/*.*')
-			.pipe(gulp.dest('docs/fonts/Centrale Sans'));
+	return gulp.src('src/app/assets/fonts/*/*.*')
+			.pipe(gulp.dest('./fonts'));
 });
