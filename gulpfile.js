@@ -35,11 +35,6 @@ gulp.task('reload', function () {
 			.pipe(connect.reload());
 });
 
-gulp.task('deploy', ['build'], function () {
-	return gulp.src("./dist/**/*")
-			.pipe(deploy())
-});
-
 gulp.task('build', ['html', 'fonts'], function() {
 	return gulp.src('index.html')
 			.pipe(useref())
