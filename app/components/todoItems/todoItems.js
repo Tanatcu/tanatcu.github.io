@@ -2,7 +2,7 @@ angular.module('directives.todoItems', []).directive('todoItems', todoItems);
 
 function todoItems() {
 	return {
-		templateUrl: 'views/todoItems/todoItems.html',
+		templateUrl: 'app/components/todoItems/todoItems.html',
 		scope: {},
 		replace: true,
 		controller: todoItemsCtrl

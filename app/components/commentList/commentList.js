@@ -2,7 +2,7 @@ angular.module('directives.commentList', []).directive('commentList', commentLis
 
 function commentList() {
 	return {
-		templateUrl: 'views/commentList/commentList.html',
+		templateUrl: 'app/components/commentList/commentList.html',
 		scope: {},
 		replace: true,
 		controller: commentListCtrl

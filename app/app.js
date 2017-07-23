@@ -8,7 +8,4 @@ angular.module('spa', [
 	'directives.todoItems',
 	'directives.commentList',
 	'ctrlSubmit'
-]).run(run);
-
-function run() {
-}
+]);
