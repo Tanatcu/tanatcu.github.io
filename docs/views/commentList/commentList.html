@@ -1,0 +1,29 @@
+<div class="comment_list shadow" ng-show="!!postId">
+	<h1 class="title comments">
+		Comments #{{postId}}
+	</h1>
+
+	<div class="grid">
+		<div class="comment" ng-repeat="comment in comments track by comment.id" ng-class="{'line': !$last}">
+			<div class="avatar_wrap">
+				<div class="avatar" ng-style="{'backgroundColor': comment.color}"></div>
+			</div>
+
+			<div class="text">
+				{{comment.text}}
+			</div>
+		</div>
+	</div>
+
+	<div class="new_comment grid">
+		<div class="avatar_wrap">
+			<input title="color" type="color" ng-model="comment.color">
+		</div>
+
+		<div class="textarea">
+			<textarea title="text" ng-model="comment.text" ctrl-submit="addComment(comment)"></textarea>
+		</div>
+	</div>
+
+	<p class="tooltip">* Press ctrl + Enter to send comment</p>
+</div>

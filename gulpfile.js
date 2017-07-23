@@ -13,7 +13,7 @@ var useref = require('gulp-useref'),
 
 gulp.task('default', ['watch'], function () {
 	connect.server({
-		root: './dist',
+		root: './docs',
 		port: 3000,
 		host: 'localhost',
 		fallback: 'index.html',
@@ -40,15 +40,15 @@ gulp.task('build', ['html', 'fonts'], function() {
 			.pipe(useref())
 			.pipe(gulpif('*.js', uglify()))
 			.pipe(gulpif('*.css', cssmin()))
-			.pipe(gulp.dest('dist/'));
+			.pipe(gulp.dest('docs/'));
 });
 
 gulp.task('html', function() {
 	return gulp.src(['app/views/*.html', 'app/components/**/*.html'])
-			.pipe(gulp.dest('dist/views'));
+			.pipe(gulp.dest('docs/views'));
 });
 
 gulp.task('fonts', function() {
 	return gulp.src('app/assets/fonts/*/*.*')
-			.pipe(gulp.dest('dist/fonts/Centrale Sans'));
+			.pipe(gulp.dest('docs/fonts/Centrale Sans'));
 });
