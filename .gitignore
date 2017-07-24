@@ -2,4 +2,3 @@ node_modules
 .idea
 .git
 test.txt
-dist
