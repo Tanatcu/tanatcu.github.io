@@ -22,12 +22,12 @@ function storage($window) {
 		var date = new Date();
 		var storageData = JSON.parse($window.localStorage.getItem(instance)) || [];
 
-		model.id = date.getMilliseconds();
+		model.id = date.getTime();
 
 		storageData.push(model);
 		$window.localStorage.setItem(instance, JSON.stringify(storageData));
 
-		return this.list(instance)
+		return this.list(instance);
 	};
 
 	/**
@@ -40,7 +40,7 @@ function storage($window) {
 		var storageData = JSON.parse($window.localStorage.getItem(instance)) || [];
 
 		return storageData.filter(function (item) {
-			return item.id === id
+			return item.id === id;
 		});
 	};
 
@@ -82,6 +82,6 @@ function storage($window) {
 
 		$window.localStorage.setItem(instance, JSON.stringify(storageData));
 
-		return this.list(instance)
+		return this.list(instance);
 	};
 }

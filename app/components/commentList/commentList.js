@@ -36,10 +36,11 @@ function commentListCtrl($scope, Comment, toastr) {
 		$scope.$parent.$broadcast('decreaseCommentCount', $scope.postId)
 	};
 
-	$scope.$on('showComments', function (scope, id) {
-		$scope.postId = id;
+	$scope.$on('showComments', function (scope, postInfo) {
+		$scope.postId = postInfo.id;
+		$scope.index = postInfo.index;
 
-		$scope.comments = Comment.list(id);
+		$scope.comments = Comment.list(postInfo.id);
 	});
 
 	$scope.$on('postRemoved', function () {

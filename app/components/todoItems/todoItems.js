@@ -27,9 +27,9 @@ function todoItemsCtrl($scope, Item, toastr) {
 		$scope.item.name = '';
 	};
 
-	$scope.showItem = function (item) {
+	$scope.showItem = function (item, index) {
 		$scope.activeItemId = item.id;
-		$scope.$parent.$broadcast('showComments', item.id);
+		$scope.$parent.$broadcast('showComments', {id: item.id, index: index});
 	};
 
 	$scope.delete = function (id) {
