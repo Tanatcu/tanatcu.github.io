@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- build:css css/plugin.css-->
+	<link rel="stylesheet" href="node_modules/angular-toastr/dist/angular-toastr.css">
+	<link rel="stylesheet" href="src/assets/css/index.css">
+	<!-- endbuild -->
+
+	<base href="https://tanatcu.github.io/">
+</head>
+
+<body ng-app="spa" ng-cloak>
+
+<ui-view></ui-view>
+
+<!-- build:js js/plugins.js-->
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="node_modules/angular-animate/angular-animate.min.js"></script>
+<script src="node_modules/angular-toastr/dist/angular-toastr.js"></script>
+<script src="node_modules/angular-toastr/dist/angular-toastr.tpls.js"></script>
+<!-- endbuild -->
+
+<!-- build:js app.js-->
+<script src="src/app.js"></script>
+<script src="src/router/index.js"></script>
+
+<script src="src/configs/toastrConfig.js"></script>
+
+<script src="src/components/todoItems/todoItems.js"></script>
+<script src="src/components/commentList/commentList.js"></script>
+<script src="src/components/ctrlSubmit/ctrlSubmit.js"></script>
+
+<script src="src/services/storage.js"></script>
+<script src="src/services/item.js"></script>
+<script src="src/services/comment.js"></script>
+
+<script src="src/controllers/mainCtrl.js"></script>
+<!-- endbuild -->
+
+</body>
+</html>
