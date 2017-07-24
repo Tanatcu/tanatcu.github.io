@@ -9,7 +9,7 @@
 
 	</div>
 
-	<div class="list_item" ng-repeat="item in items track by item.id" ng-click="showItem(item)">
+	<div class="list_item" ng-repeat="item in items track by item.id" ng-click="showItem(item, $index)">
 		<div class="inner">
 
 			<div class="text_with_bundle">
